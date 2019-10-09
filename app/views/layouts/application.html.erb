@@ -20,8 +20,8 @@
       <% if @cart %>
 
       <div id="cart" class="carts">
-        <%= render @cart %>
-     </div>
+        <%= render_if @cart && @cart.line_items.any?, @cart %>
+      </div>
      
      <% end %>
         <ul>
